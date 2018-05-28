@@ -12,9 +12,7 @@
     </script>
     <script>
       function goToLogin(){
-        $.get("login.html", function(data) {
-          $("html").replaceWith(data);
-        });
+        $("html").replaceWith($(data).get("login.html html"));
       }
     </script>
   </head>
