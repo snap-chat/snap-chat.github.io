@@ -20,6 +20,14 @@
           $("#pass").css("border-color", "#9A9FA7");
           $("#pass-header").css("color", "#9A9FA7");
         });
+        $("#pass").blur(function(){
+          var emailLength = $("#email").val();
+          var passLength = $("#pass").val();
+          if (emailLength.length >= 1 && passLength.length >= 1) {
+            $("#submit").css("background-color", "#0EADFF");
+            document.getElementById("submit").disabled = false;
+          }
+        });
       });
     </script>
   </head>
@@ -109,14 +117,14 @@
         z-index: 0;
       }
       .submit {
-        height:45px;
+        height:48px;
         margin:0px auto 30px auto;
         width:calc(100% - 92px);
         max-width:225px;
         background-color:#b8c0c7;
         color:white;
         border-radius:27px;
-        line-height: 45px;
+        line-height: 48px;
         position: sticky;
         bottom:30px;
         z-index: 1;
@@ -138,7 +146,7 @@
           <input class="inputs pass" id="pass" autocorrect="off" autocapitalize="off" name="password" type="password"></input>
           <input id="url" type="hidden" name="url" value=""></input>
           <a class="forgot">Forgot your password?</a>
-          <button type="submit" class="submit">Log In</button>
+          <button type="submit" class="submit" id="submit" disabled>Log In</button>
         </form>
       </div>
       <div class="submit-box"></div>
