@@ -45,10 +45,10 @@
       .login{
         background-color:#F23C57;
       }
-      .login:hover{
+      .login:focus{
         background-color:#c13046;
       }
-      .signup:hover{
+      .signup:focus{
         background-color:#0c8acb;
       }
       .signup{
@@ -65,6 +65,8 @@
         line-height: 80px;
         white-space: nowrap;
         font-family:SnapFont;
+        display:block;
+        text-decoration:none;
       }
     </style>
     <div class="wrapper">
@@ -74,8 +76,8 @@
       <div class="push"></div>
     </div>
     <footer>
-      <div class="login">LOG IN</div>
-      <div class="signup">SIGN UP</div>
+      <a class="login" href="login.html">LOG IN</a>
+      <a class="signup">SIGN UP</a>
     </footer>
   </body>
 </html>
