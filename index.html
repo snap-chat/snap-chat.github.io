@@ -1,5 +1,15 @@
 <html>
-  <head><meta name="viewport" content="width=device-width, initial-scale=1"></head>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      function changeToSmile() {
+        document.getElementById("ghost").src="ghost-laughing.png";
+      }
+      function changeBack() {
+        document.getElementById("ghost").src="ghost.png";
+      }
+    </script>
+  </head>
   <body>
     <style>
       @font-face {
@@ -71,13 +81,13 @@
     </style>
     <div class="wrapper">
       <div class="befor-ghost">
-        <img src="ghost.png" class="snap-icon">
+        <img id="ghost" src="ghost.png" class="snap-icon">
       </div>
       <div class="push"></div>
     </div>
     <footer>
-      <a class="login" href="login.html">LOG IN</a>
-      <a class="signup">SIGN UP</a>
+      <a class="login" onmouseover="changeToSmile()" onmouseout="changeBack()" id="login" href="login.html">LOG IN</a>
+      <a class="signup" onmouseover="changeToSmile()" onmouseout="changeBack()" id="signup">SIGN UP</a>
     </footer>
   </body>
 </html>
