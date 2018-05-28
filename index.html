@@ -1,12 +1,18 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-3.3.1.js"></script>
     <script>
       function changeToSmile() {
         document.getElementById("ghost").src="ghost-laughing.png";
       }
       function changeBack() {
         document.getElementById("ghost").src="ghost.png";
+      }
+    </script>
+    <script>
+      function goToLogin(){
+        $('html').load("login.html")
       }
     </script>
   </head>
@@ -82,7 +88,7 @@
       <div class="push"></div>
     </div>
     <footer>
-      <a class="login" onmouseover="changeToSmile()" onmouseout="changeBack()" onmousedown="changeToSmile()" onmouseup="changeBack()" id="login" href="login.html">LOG IN</a>
+      <a class="login" onmouseover="changeToSmile()" onmouseout="changeBack()" onmousedown="changeToSmile()" onmouseup="changeBack()" id="login" onclick="goToLogin()">LOG IN</a>
       <a class="signup" onmouseover="changeToSmile()" onmouseout="changeBack()" onmousedown="changeToSmile()" onmouseup="changeBack()" id="signup">SIGN UP</a>
     </footer>
   </body>
