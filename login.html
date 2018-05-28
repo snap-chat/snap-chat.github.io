@@ -20,7 +20,7 @@
           $("#pass").css("border-color", "#9A9FA7");
           $("#pass-header").css("color", "#9A9FA7");
         });
-        $("#pass").blur(function(){
+        $("input").keyup(function(){
           var emailLength = $("#email").val();
           var passLength = $("#pass").val();
           if (emailLength.length >= 1 && passLength.length >= 1) {
