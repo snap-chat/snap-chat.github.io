@@ -12,8 +12,7 @@
     </script>
     <script>
       function goToLogin(){
-        var documentHtml = $load("login.html");
-        $('html').html(documentHtml);
+        $('html').load("login.html html > *");
       }
     </script>
   </head>
