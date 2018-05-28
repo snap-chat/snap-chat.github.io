@@ -2,12 +2,18 @@
   <head><meta name="viewport" content="width=device-width, initial-scale=1"></head>
   <body>
     <style>
+      @font-face {
+        font-family: SnapFont;
+        src: url(snapchatfont.woff2);
+      }
       html, body{
         height:100%;
       }
       body{
         background-color:black;
         margin:0px;
+        font-family:SnapFont;
+        font-weight:700;
       }
       .wrapper{
         min-height:100%;
@@ -35,15 +41,21 @@
         height:160px;
       }
       .login{
-        height:80px;
-        width:100%;
         background-color:#F23C57;
       }
       .signup{
-        height:80px;
-        width:100%;
         background-color:#0EADFF;
         border-radius:0 0 10px 10px;
+      }
+      .login, .signup{
+        height:80px;
+        width:100%;
+        text-align: center;
+        color:white;
+        letter-spacing: 2px;
+        font-size:23px;
+        line-height: 80px;
+        white-space: nowrap;
       }
     </style>
     <div class="wrapper">
@@ -53,8 +65,8 @@
       <div class="push"></div>
     </div>
     <footer>
-      <div class="login"></div>
-      <div class="signup"></div>
+      <div class="login">LOG IN</div>
+      <div class="signup">SIGN UP</div>
     </footer>
   </body>
 </html>
