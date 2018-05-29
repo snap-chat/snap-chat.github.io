@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head><meta name="viewport" content="width=device-width, initial-scale=1"></head>
-  <script src="jquery-3.3.1.js"></script>
-  <body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-3.3.1.js"></script>
     <script>
       function changeToSmile() {
         document.getElementById("ghost").src="ghost-laughing.png";
@@ -13,7 +13,7 @@
     </script>
     <script>
       function goToLogin(){
-        $('body').load("login.html");
+        $('html').load("login.html");
       }
     </script>
     <style>
@@ -80,6 +80,8 @@
         text-decoration:none;
       }
     </style>
+  </head>
+  <body>
     <div class="wrapper">
       <div class="befor-ghost">
         <img id="ghost" src="ghost.png" class="snap-icon">
