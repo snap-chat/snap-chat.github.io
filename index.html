@@ -1,19 +1,12 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="jquery-3.3.1.js"></script>
     <script>
       function changeToSmile() {
         document.getElementById("ghost").src="ghost-laughing.png";
       }
       function changeBack() {
         document.getElementById("ghost").src="ghost.png";
-      }
-    </script>
-    <script>
-      function goToLogin(){
-        $('html').load("login.html");
       }
     </script>
     <style>
@@ -35,19 +28,14 @@
         border-radius:10px;
       }
       .befor-ghost{
-        width:100%;
-        height:calc(100% - 180px);
-        position:relative;
       }
       .snap-icon{
         width:73px;
         height:70px;
-        margin:auto;
-        display:block;
         position: absolute;
-        top: 50%;
+        top: 35%;
         left: 50%;
-        margin-top: -48px;
+        margin-top: -35px;
         margin-left: -36.5px;
       }
       footer, .push{
@@ -83,13 +71,11 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="befor-ghost">
-        <img id="ghost" src="ghost.png" class="snap-icon">
-      </div>
+      <img id="ghost" src="ghost.png" class="snap-icon">
       <div class="push"></div>
     </div>
     <footer>
-      <a class="login" onmouseover="changeToSmile()" onmouseout="changeBack()" onmousedown="changeToSmile()" onmouseup="changeBack()" id="login" onclick="goToLogin()">LOG IN</a>
+      <a class="login" onmouseover="changeToSmile()" onmouseout="changeBack()" onmousedown="changeToSmile()" onmouseup="changeBack()" href="login.html" id="login">LOG IN</a>
       <a class="signup" onmouseover="changeToSmile()" onmouseout="changeBack()" onmousedown="changeToSmile()" onmouseup="changeBack()" id="signup">SIGN UP</a>
     </footer>
   </body>
