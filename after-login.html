@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      @keyframes fade-in-out {
+        0%,100% { opacity: 0 }
+        50% { opacity: 1 }
+        }
+      @keyframes fade-in {
+        0% { opacity: 0 }
+        100% { opacity: 1 }
+        }
+      @keyframes fade-out {
+        0% { opacity: 1 }
+        100% { opacity: 0 }
+        }
+      @font-face {
+        font-family: SnapFont;
+        src: url(snapchatfont.woff2);
+      }
+      html{
+        height:100%;
+        margin:0px;
+      }
+      body{
+        height:100%;
+        background-color:black;
+        margin:0px;
+        font-family: SnapFont;
+      }
+      .wrapper{
+        width:100%;
+        margin-bottom:-76px;
+        z-index:1;
+        padding-top: 50px;
+      }
+      .snap-icon {
+        opacity:0;
+        animation:fade-in-out 2s ease-in-out 2;
+        width:73px;
+        height:70px;
+        position: fixed;
+        top: 35%;
+        left: 50%;
+        margin-top: -35px;
+        margin-left: -36.5px;
+      }
+      .backg {
+        background-color:white;
+        border-radius:10px;
+        width:100%;
+        height:100%;
+        position: fixed;
+        z-index:-1;
+      }
+      header{
+        width:100%;
+        height:50px;
+        position: fixed;
+        top: 0px;
+        z-index:4;
+        animation:fade-out 1s ease-in-out 4s forwards;
+        opacity:1;
+      }
+      .before-back {
+        display: block;
+        width: 46px;
+        height: 50px;
+        margin-right: auto;
+      }
+      .back{
+        height:18px;
+        width:10px;
+        padding:16px 18px;
+      }
+      .expired {
+        max-width:200px;
+        height:auto;
+        position: fixed;
+        top: 35%;
+        left: 50%;
+        margin-top: -86.5px;
+        margin-left: -100px;
+      }
+      .sorry {
+        animation:fade-in 1s ease-in-out 4s forwards;
+        opacity:0;
+      }
+      .sorry > p{
+        width:100%;
+        height:auto;
+        position: fixed;
+        top: 35%;
+        left: 50%;
+        text-align: center;
+        margin-top: 100px;
+        margin-left: calc(-50% - 20px);
+        padding:0px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="backg"></div>
+    <div class="wrapper">
+      <header>
+        <a class="before-back" href="login.html" >
+          <img class="back" src="back-icon.png">
+        </a>
+      </header>
+      <img src="ghost.png" class="snap-icon" id="snap-icon">
+      <div class="sorry" id="expired">
+        <img src="ghost-expired.png" class="expired">
+        <p>Sorry, This offer has been expired,
+          <br>
+          Please visit <span style="color:#FFFC00;">Snapchat.com</span> for the latest.
+        </p>
+      </div>
+  </body>
+</html>
